@@ -1,11 +1,17 @@
+import Header from "./Components/Header";
+import Adduser from "./pages/Adduser";
+import Alluser from "./pages/Alluser";
+import Homepage from "./pages/Homepage";
+
 const App = () => {
   return (
     <div>
-      <h1 className="text-3xl font-bold underline bg-red-500 text-white text-center p-5">
-        Hello world!
-      </h1>
+      <Header />
+      <Homepage />
+      <Adduser />
+      <Alluser />
     </div>
   );
 };
- 
+
 export default App;
