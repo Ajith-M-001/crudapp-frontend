@@ -10,3 +10,12 @@ export const adduser = async (fromData) => {
     return error;
   }
 };
+
+export const getAllUser = async () => {
+  try {
+    const response = await axios.get(`${baseURL}/all`);
+    return response.data;
+  } catch (error) {
+    return error;
+  }
+};
