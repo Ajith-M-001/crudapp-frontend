@@ -4,6 +4,7 @@ import { MdEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
 import { getAllUser } from "../services/handleApi";
 import { Oval } from "react-loader-spinner";
+import { Link } from "react-router-dom";
 const Alluser = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -24,7 +25,7 @@ const Alluser = () => {
   }, []);
 
   return (
-    <div className="container mx-auto p-5">
+    <div className="container mx-auto p-5 overflow-auto">
       <h1 className="text-3xl font-bold my-3">All User</h1>
       {loading ? (
         <div className="flex justify-center items-center">
@@ -64,9 +65,9 @@ const Alluser = () => {
                   <td className="px-4 py-2 border">{user.state}</td>
                   <td className="px-4 py-2 border">
                     <div className=" text-3xl space-x-4 flex justify-center items-center">
-                      <button>
+                      <Link to={`/${user._id}`}>
                         <IoMdEye className="text-blue-700" />
-                      </button>
+                      </Link>
                       <button>
                         <MdEdit className="text-green-700" />
                       </button>

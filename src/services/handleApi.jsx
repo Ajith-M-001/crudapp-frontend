@@ -19,3 +19,12 @@ export const getAllUser = async () => {
     return error;
   }
 };
+
+export const getSinlgeUser = async (id) => {
+  try {
+    const response = await axios.get(`${baseURL}/${id}`);
+    return response.data;
+  } catch (error) {
+    return error;
+  }
+};
