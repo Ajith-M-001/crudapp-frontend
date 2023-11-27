@@ -1,6 +1,11 @@
 import { useState } from "react";
+import { adduser } from "../services/handleApi";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
 
 const Adduser = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -10,13 +15,28 @@ const Adduser = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    try {
+      const response = await adduser(formData);
+      toast.success(response.message);
+      setFormData({
+        name: "",
+        email: "",
+        district: "",
+        state: "",
+      });
+      setTimeout(() => {
+        navigate("/all");
+      }, 6000);
+    } catch (error) {
+      toast.error(error.message);
+    }
   };
   return (
     <div className="container mx-auto p-5">
       <h1 className="text-3xl font-bold text-center mb-4">Add User</h1>
+      <ToastContainer position="bottom-left" />
       <form
         onSubmit={handleSubmit}
         className="max-w-lg mx-auto border p-5 rounded-md"
@@ -28,6 +48,8 @@ const Adduser = () => {
             type="text"
             className="block border w-full px-4 py-2 rounded-md outline-none focus:border-blue-500 my-1 "
             name="name"
+            required
+            value={formData.name}
           />
         </div>
         <div className="my-2">
@@ -37,6 +59,8 @@ const Adduser = () => {
             className="block border w-full px-4 py-2 rounded-md outline-none focus:border-blue-500 my-1 "
             type="text"
             name="email"
+            required
+            value={formData.email}
           />
         </div>
         <div className="my-2">
@@ -48,6 +72,8 @@ const Adduser = () => {
             className="block border w-full px-4 py-2 rounded-md outline-none focus:border-blue-500 my-1 "
             type="text"
             name="district"
+            required
+            value={formData.district}
           />
         </div>
         <div className="my-2">
@@ -57,6 +83,8 @@ const Adduser = () => {
             className="block border w-full px-4 py-2 rounded-md outline-none focus:border-blue-500 my-1 "
             type="text"
             name="state"
+            required
+            value={formData.state}
           />
         </div>
         <button className="bg-gray-700 w-full px-4 py-2 text-white text-lg font-semibold rounded-md hover:bg-gray-800">
