@@ -4,6 +4,7 @@ import Alluser from "./pages/Alluser";
 import Homepage from "./pages/Homepage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SingleUser from "./pages/SingleUser";
+import UpdateUser from "./pages/UpdateUser";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/add" element={<Adduser />} />
         <Route path="/all" element={<Alluser />} />
         <Route path="/:id" element={<SingleUser />} />
+        <Route path="/update/:id" element={<UpdateUser />} />
       </Routes>
     </BrowserRouter>
   );

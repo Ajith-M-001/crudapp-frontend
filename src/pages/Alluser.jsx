@@ -6,7 +6,7 @@ import { getAllUser } from "../services/handleApi";
 import { Oval } from "react-loader-spinner";
 import { Link } from "react-router-dom";
 const Alluser = () => {
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -68,9 +68,9 @@ const Alluser = () => {
                       <Link to={`/${user._id}`}>
                         <IoMdEye className="text-blue-700" />
                       </Link>
-                      <button>
+                      <Link to={`/update/${user._id}`}>
                         <MdEdit className="text-green-700" />
-                      </button>
+                      </Link>
                       <button>
                         <MdDelete className="text-red-700" />
                       </button>

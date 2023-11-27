@@ -28,3 +28,12 @@ export const getSinlgeUser = async (id) => {
     return error;
   }
 };
+
+export const updateUser = async (id, formData) => {
+  try {
+    const response = await axios.put(`${baseURL}/update/${id}`, formData);
+    return response.data;
+  } catch (error) {
+    return error;
+  }
+};
