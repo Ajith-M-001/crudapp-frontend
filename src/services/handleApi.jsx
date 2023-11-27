@@ -37,3 +37,12 @@ export const updateUser = async (id, formData) => {
     return error;
   }
 };
+
+export const deleteUser = async (id) => {
+  try {
+    const response = await axios.delete(`${baseURL}/delete/${id}`);
+    return response.data;
+  } catch (error) {
+    return error;
+  }
+};
