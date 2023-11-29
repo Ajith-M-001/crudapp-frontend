@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "http://localhost:5000/api/user";
+const baseURL = "https://crudapp-backend.onrender.com/api/user";
 
 export const adduser = async (fromData) => {
   try {
