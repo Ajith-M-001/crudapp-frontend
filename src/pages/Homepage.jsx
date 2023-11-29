@@ -1,6 +1,6 @@
 const Homepage = () => {
   return (
-    <div className="max-w-md mx-auto mt-8">
+    <div className="max-w-lg mx-auto mt-8">
       <h1 className="text-4xl text-center font-bold mb-5">Welcome Friends</h1>
       <p className="mb-5 text-lg">
         Today,we are building CRUD APP using MERN. A CRUD (Create, Read, Update,
