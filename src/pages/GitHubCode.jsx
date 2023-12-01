@@ -1,9 +1,9 @@
 const GitHubCode = () => {
   return (
-    <div className="flex justify-center mt-16 h-screen flex-col">
+    <div className="flex justify-center items-center h-screen flex-col">
       <p className="text-2xl font-bold mb-4">GitHub Repositories</p>
-      <div className="text-center inline-block">
-        <div className="mb-4 inline-block ">
+      <div className="text-center">
+        <div className="mb-4">
           <p className="mb-2 font-semibold">crudapp-frontend :</p>
           <a
             href="https://github.com/Ajith-M-001/crudapp-frontend"
@@ -14,7 +14,7 @@ const GitHubCode = () => {
             https://github.com/Ajith-M-001/crudapp-frontend
           </a>
         </div>
-        <div className="inline-block">
+        <div>
           <p className="mb-2 font-semibold">Crudapp_backend :</p>
           <a
             href="https://github.com/Ajith-M-001/Crudapp_backend"
