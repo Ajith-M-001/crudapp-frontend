@@ -1,6 +1,6 @@
 const GitHubCode = () => {
   return (
-    <div className="flex justify-center items-center h-screen flex-col">
+    <div className="flex justify-center mt-24 h-screen flex-col">
       <p className="text-2xl font-bold mb-4">GitHub Repositories</p>
       <div className="text-center">
         <div className="mb-4">
