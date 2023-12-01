@@ -8,10 +8,13 @@ const Header = () => {
           <h1 className="text-3xl font-bold">CRUD-APP</h1>
         </Link>
         <nav className="space-x-6 text-2xl font-semibold">
-          <Link to={"/add"} className="hover:text-white" >
+          <Link to={"/githubcode"} className="hover:text-white">
+            GitHub Code
+          </Link>
+          <Link to={"/add"} className="hover:text-white">
             add User
           </Link>
-          <Link to={"/all"} className="hover:text-white" >
+          <Link to={"/all"} className="hover:text-white">
             all User
           </Link>
         </nav>

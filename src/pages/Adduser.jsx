@@ -50,6 +50,7 @@ const Adduser = () => {
             name="name"
             required
             value={formData.name}
+            autoComplete="off"
           />
         </div>
         <div className="my-2">
@@ -61,6 +62,7 @@ const Adduser = () => {
             name="email"
             required
             value={formData.email}
+            autoComplete="off"
           />
         </div>
         <div className="my-2">
@@ -74,6 +76,7 @@ const Adduser = () => {
             name="district"
             required
             value={formData.district}
+            autoComplete="off"
           />
         </div>
         <div className="my-2">
@@ -85,6 +88,7 @@ const Adduser = () => {
             name="state"
             required
             value={formData.state}
+            autoComplete="off"
           />
         </div>
         <button className="bg-gray-700 w-full px-4 py-2 text-white text-lg font-semibold rounded-md hover:bg-gray-800">

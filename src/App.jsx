@@ -5,6 +5,7 @@ import Homepage from "./pages/Homepage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SingleUser from "./pages/SingleUser";
 import UpdateUser from "./pages/UpdateUser";
+import GitHubCode from "./pages/GitHubCode";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/all" element={<Alluser />} />
         <Route path="/:id" element={<SingleUser />} />
         <Route path="/update/:id" element={<UpdateUser />} />
+        <Route path="/githubcode" element={<GitHubCode />} />
       </Routes>
     </BrowserRouter>
   );
